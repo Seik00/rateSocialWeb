@@ -1,0 +1,82 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@johmun/vue-tags-input": "^2.1.0",
+    "@webzlodimir/vue-bottom-sheet": "^2.0.2",
+    "axios": "^1.3.4",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.1",
+    "core-js": "^3.6.4",
+    "es6-promise": "^4.2.8",
+    "font-awesome": "^4.7.0",
+    "mobile-device-detect": "^0.3.3",
+    "nprogress": "^0.2.0",
+    "sass-loader": "^10",
+    "trading-vue-js": "^1.0.2",
+    "v-clipboard": "^3.0.0-next.1",
+    "v-qrcode": "^1.0.3",
+    "vue": "^2.6.11",
+    "vue-flag-icon": "^1.0.6",
+    "vue-fontawesome-icon": "^1.3.0",
+    "vue-good-table": "^2.19.1",
+    "vue-i18n": "^8.16.0",
+    "vue-jstree": "^2.1.6",
+    "vue-lazyload": "^1.3.3",
+    "vue-meta": "^2.3.3",
+    "vue-perfect-scrollbar": "^0.2.0",
+    "vue-router": "^3.1.6",
+    "vue-sweetalert2": "^3.0.3",
+    "vuelidate": "^0.7.5",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.13.1",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
+}
