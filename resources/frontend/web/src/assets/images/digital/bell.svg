@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
-  <g id="bell" transform="translate(-313 -98)">
-    <circle id="Ellipse_1" data-name="Ellipse 1" cx="9.5" cy="9.5" r="9.5" transform="translate(313 98)" fill="rgba(255,255,255,0.51)"/>
-    <g id="bell-2" data-name="bell" transform="translate(316.171 102.305)">
-      <path id="Path_1" data-name="Path 1" d="M10.389,7.322A2.9,2.9,0,0,1,9.36,5.1V3.9a3.033,3.033,0,0,0-2.6-3V.433a.433.433,0,1,0-.866,0V.9a3.032,3.032,0,0,0-2.6,3V5.1A2.9,2.9,0,0,1,2.265,7.325a.757.757,0,0,0,.493,1.333H9.9a.758.758,0,0,0,.489-1.336Z" fill="#103b8b"/>
-      <path id="Path_2" data-name="Path 2" d="M9.917,22.3A1.626,1.626,0,0,0,11.507,21H8.326A1.626,1.626,0,0,0,9.917,22.3Z" transform="translate(-3.587 -11.909)" fill="#103b8b"/>
-    </g>
-  </g>
-</svg>
