@@ -734,6 +734,8 @@
   "withdrawDaAmount": "Withdraw DA Amount",
   "MINING_BETWEEN_9AM_TO_9PM": "Please mine between 9am to 9pm",
   "30_DAYS_TO_WITHDRAW": "It takes 30 days to withdraw",
-  "sign_in_now": "Sign In Now"
+  "sign_in_now": "Sign In Now",
+  "edit_profile": "Edit Profile",
+  "withdraw_details": "Withdraw Details"
 
 }

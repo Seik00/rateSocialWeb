@@ -1,170 +1,124 @@
 <template>
   <div class="main-content" style="padding-bottom: 15vh;">
-    <div class="appBar">
-      <span>{{ $t("profile") }}</span>
-    </div>
-    <div style="padding: 5px 20px">
+    <!-- <div class="appBar text-right">
+      <img width="22px" src="../../../assets/images/digital/transaction.svg" alt="">
+    </div> -->
+    <div style="padding:30px 20px">
 
-      <b-card class="mb-3 bg-greyblue">
-        <div class="d-flex">
-          <div class="avatar-circle big" :style="{ backgroundImage: 'url(' + `/images/level1/${currentPackage.toLowerCase()}.png` + ')' }"></div>
-          <div class="text-left ml-3 flex-grow-1">
-            <h5 class="font-weight-bold mb-0">{{ userID }}</h5>
-            <p class="text-8 font-weight-bold mb-0">
-              {{ $t("invi_code") }} <u>{{ ref_code }}</u></p>
-            <div class="d-flex mt-2 justify-content-end align-items-center">
-              <div class="mr-2">
-                <p class="text-right text-8 font-weight-bold mb-1">
-                  {{ $t("current_level") }} <br> <span class="text-14 text-white">{{ currentPackage
-                  }}</span></p>
-
-              </div>
-              <!-- <img height="40px" :src="`/images/level1/${currentPackage.toLowerCase()}.png`" alt=""> -->
+      <div class="d-flex">
+        <!-- <div class="avatar-circle big" :style="{ backgroundImage: 'url(' + `/images/level1/${currentPackage.toLowerCase()}.png` + ')' }"></div> -->
+        <div class="avatar-circle big"></div>
+        <div class="text-left ml-3 flex-grow-1">
+          <h3 class="text-title mb-0">Sign In</h3>
+          <p class="text-grey font-weight-bold mb-0">
+            {{ $t("invi_code") }} {{ ref_code }}</p>
+          <!-- <div class="d-flex mt-2 justify-content-end align-items-center">
+            <div class="mr-2">
+              <p class="text-right text-8 font-weight-bold mb-1">
+                {{ $t("current_level") }} <br> <span class="text-14 text-white">{{ currentPackage
+                }}</span></p>
 
             </div>
+          </div> -->
 
+        </div>
+      </div>
+
+      <b-card class="mb-3 mt-4 p-2 bg-darkpurple">
+        <div class="d-flex justify-content-between align-items-end mb-3">
+          
+          <h5 class="font-weight-bold mb-0">{{ $t('balance') }}</h5>
+          <span class="text-14 text-white font-weight-bold">{{ currentPackage}} <img height="14px" src="../../../assets/images/digital/currency.svg" alt=""></span>
+        </div>
+        <div class="d-flex align-items-end">
+            <h3 class="font-weight-bold mb-0">USDT {{ point1 }}</h3>
+            
           </div>
-        </div>
       </b-card>
 
-      <b-card class="mb-3 bg-greyblue">
-        <h5 class="font-weight-bold mb-2">{{ $t('balance') }}</h5>
-        <div class="d-flex justify-content-between align-items-end">
-          <span class="text-20"><img height="20px" src="../../../assets/images/digital/currency.svg" alt=""></span>
-          <div class="d-flex align-items-end">
-            <span class="text-12 mb-0 mr-1">USDT</span>
-            <h3 class="font-weight-bold mb-0">{{ point1 }}</h3>
-          </div>
-        </div>
-      </b-card>
-
-      <b-card class="mb-3 bg-greyblue">
-        <h5 class="font-weight-bold mb-3">{{ $t('assets') }}</h5>
-        <div v-for="item in assetList" :key="item.id">
-          <img src="../../../assets/images/logo.png" @error="imageLoadError" alt="" height="24px">
-          <span class="mx-2 text-white">{{ item.coin_name }}</span>
-
-          <b-row>
-            <b-col cols="6">
-              <p class="mb-0">{{ $t('current_balance') }}</p>
-              <p class="text-white">{{ item.asset_active }}</p>
-            </b-col>
-            <b-col cols="6">
-              <p class="mb-0">{{ $t('freeze_wallet') }}</p>
-              <p class="text-white">{{ item.asset_frozen }}</p>
-            </b-col>
-          </b-row>
-
-
-        </div>
-      </b-card>
-
-      <b-card class="mb-3 bg-greyblue">
-        <div class="d-flex justify-content-between">
-          <div>
-            <h5 class="font-weight-bold mb-3">{{ $t('level_benefit') }}</h5>
-            <h6 class="text-12 ml-2 mb-2 font-weight-bold">{{ $t('current_level_benefit') }}</h6>
-
-          </div>
-
-        </div>
-
-        <div class="ml-2">
-          <b-row class="mb-2">
-            <b-col cols="12">{{ $t(`benefit_${user_group_id}`) }}</b-col>
-          </b-row>
-          <h6 class="text-12 mb-2 font-weight-bold" v-if="user_group_id!=5">{{ $t('upLevel_hint') }}</h6>
-          <b-row class="" v-if="user_group_id!=5">
-            <b-col cols="12">
-              <p class="mb-1">{{ $t(`upLevel_hint_${user_group_id + 1}`) }}</p>
-            </b-col>
-            <b-col cols="12">
-              <div class="d-flex">
-                <span class="text-white mr-2" style="white-space: nowrap;">{{ $t('benefit') }}</span>{{
-                  $t(`benefit_${user_group_id + 1}`) }}
-              </div>
-            </b-col>
-          </b-row>
-
-        </div>
-      </b-card>
-      <b-row class="mb-3">
-        <b-col cols="3" class="">
-          <b-link to="/web/myWallet/walletRecord" class="">
-            <div class="bg-greyblue rounded px-2 pt-2">
-              <p class="mb-3 text-white text-8 font-weight-bold">{{ $t('record') }}</p>
-              <div class="d-flex justify-content-end align-items-center w-100">
-                <span class="text-24 mb-0"><img width="22px" src="../../../assets/images/digital/transaction.svg"
-                    alt=""></span>
-              </div>
-            </div>
-          </b-link>
-        </b-col>
-        <b-col cols="3" class="">
+      <b-card class="mb-3 mt-4 p-2 bg-white">
+        <h5 class="font-weight-bold mb-4 text-head-title">{{ $t('transaction') }}</h5>
           <b-link to="/web/deposit">
-            <div class="bg-greyblue rounded px-2 pt-2">
-              <p class="mb-3 text-white text-8 font-weight-bold">{{ $t('topup') }}</p>
-              <div class="d-flex justify-content-end align-items-center w-100">
-                <span class="text-24 mb-0"><img width="22px" src="../../../assets/images/digital/deposit.svg"
-                    alt=""></span>
-              </div>
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/two-arrows (2) 1.png" alt="">
+                </div>
+
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("deposit") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
             </div>
           </b-link>
-        </b-col>
-        <b-col cols="3" class="">
+          <hr/>
           <b-link to="/web/withdraw/withdrawHistory">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/atm 1.png" alt="">
+                </div>
 
-            <div class="bg-greyblue rounded px-2 pt-2">
-              <p class="mb-3 text-white text-8 font-weight-bold">{{ $t('withdraw') }}</p>
-              <div class="d-flex justify-content-end align-items-center w-100">
-                <span class="text-24 mb-0"><img width="22px" src="../../../assets/images/digital/Solid.svg" alt=""></span>
-              </div>
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("withdraw") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
             </div>
           </b-link>
-        </b-col>
-        <b-col cols="3" class="">
-          <b-link to="/web/me/faq">
+          <hr/>
+          <b-link to="/web/myWallet/walletRecord">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/atm 1 (1).png" alt="">
+                </div>
 
-            <div class="bg-greyblue rounded px-2 pt-2">
-              <p class="mb-3 text-white text-8 font-weight-bold">{{ $t('faq') }}</p>
-              <div class="d-flex justify-content-end align-items-center w-100">
-                <span class="text-24 mb-0"><img width="22px" src="../../../assets/images/digital/Layer 2.svg"
-                    alt=""></span>
-              </div>
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("transaction") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
             </div>
           </b-link>
-        </b-col>
-      </b-row>
-      <span class="font-weight-bold">{{ $t('More') }}</span>
+      </b-card>
+
+      <b-card class="mb-3 mt-4 p-2 bg-white">
+        <h5 class="font-weight-bold mb-4 text-head-title">{{ $t('profile') }}</h5>
+          <b-link to="/web/settings/settingCenter">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/withdraw_details.png" alt="">
+                </div>
+
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("withdraw_details") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
+            </div>
+          </b-link>
+          <hr/>
+          <b-link to="/web/settings/settingCenter">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/profile.png" alt="">
+                </div>
+
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("edit_profile") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
+            </div>
+          </b-link>
+      </b-card>
+
+      <!-- <span class="font-weight-bold">{{ $t('More') }}</span>
       <b-card class="bg-greyblue">
-        <!-- <b-link to="/web/myTeam">
-          <div class="list-box">
-            <b-row align-h="start" align-v="center" class="m-0">
-              <div class="text-center text-18">
-                <img src="../../../assets/images/digital/user (3).svg" alt="">
-              </div>
-
-              <h6 class="mb-0 mx-3 text-10 text-primary">
-                {{ $t("my_team") }}
-              </h6>
-              <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: white"></i>
-            </b-row>
-          </div>
-        </b-link> -->
-        <!-- <b-link to="/web/me/faq">
-          <div class="list-box">
-            <b-row align-h="start" align-v="center" class="m-0">
-              <div class="text-center text-18">
-                <i style="width:16px" class="fa fa-question"></i>
-              </div>
-
-              <h6 class="mb-0 mx-3 text-10 text-primary">
-                {{ $t("FAQ") }}
-              </h6>
-              <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: white"></i>
-            </b-row>
-          </div>
-        </b-link> -->
         <b-link to="/web/settings/settingCenter">
           <div class="list-box">
             <b-row align-h="start" align-v="center" class="m-0">
@@ -207,20 +161,7 @@
             </b-row>
           </div>
         </b-link>
-        <!-- <b-link href="https://t.me/Digitalalpha_CS">
-          <div class="list-box">
-            <b-row align-h="start" align-v="center" class="m-0">
-              <div class="text-center text-18">
-                <i style="width:16px" class="fa fa-telegram"></i>
-              </div>
-
-              <h6 class="mb-0 mx-3 text-10 text-primary">
-                {{ $t("CS") }}
-              </h6>
-              <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: white"></i>
-            </b-row>
-          </div>
-        </b-link> -->
+      
 
         <div class="list-box" @click="openRecord">
           <b-row align-h="start" align-v="center" class="m-0">
@@ -234,25 +175,11 @@
             <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: white"></i>
           </b-row>
         </div>
-        <!-- <b-link to="/web/me/legal">
-          <div class="list-box">
-            <b-row align-h="start" align-v="center" class="m-0">
-              <div class="text-center text-18">
-                <i style="width:16px" class="fa fa-question"></i>
-              </div>
+       
+      </b-card> -->
 
-              <h6 class="mb-0 mx-3 text-10 text-primary">
-                {{ $t("legal") }}
-              </h6>
-              <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: white"></i>
-            </b-row>
-          </div>
-        </b-link> -->
-      </b-card>
-
-      <b-button class="btn bg-greyblue submit_button w-100 mt-3" @click="logoutUser">
-        {{ $t("sign_out") }}
-
+      <b-button class="btn bg-greyblue signout_button w-100 mt-3" @click="logoutUser">
+        <img src="../../../assets/images/profile/fi_1445388.png" alt="" class="mr-2"> {{ $t("sign_out") }}
       </b-button>
     </div>
 
@@ -298,6 +225,7 @@ export default {
       email: "",
       isLoading: false,
       userID: 0,
+      username: "",
       total_sponsor: "",
       point1: 0,
       point2: 0,
@@ -449,6 +377,7 @@ export default {
       result
         .then(function (value) {
           self.userID = value.data.data.id;
+          self.username = value.data.data.username;
           self.user_group_id = value.data.data.user_group_id;
           self.currentPackage = value.data.data.package.package_name_en;
           self.total_sponsor = value.data.data.total_sponsor;

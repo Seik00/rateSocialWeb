@@ -736,5 +736,7 @@
   "withdrawDaAmount": "提现 DA 数额",
   "MINING_BETWEEN_9AM_TO_9PM": "请在上午 9 点到晚上 9 点之间挖矿",
   "30_DAYS_TO_WITHDRAW": "需满30天才能提现",
-  "sign_in_now": "Sign In Now"
+  "sign_in_now": "立即登录",
+  "edit_profile": "更改个人资料",
+  "withdraw_details": "提现资料"
 }

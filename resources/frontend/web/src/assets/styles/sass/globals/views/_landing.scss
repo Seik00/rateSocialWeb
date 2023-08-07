@@ -21,6 +21,8 @@
   background-image: url('../../../../assets/images/faces/1.jpg');
   background-position: center;
   background-size: cover;
+  border-radius: 10px;
+  margin-right: 10px;
 
 }
 
@@ -33,9 +35,14 @@
   font-size: 8px !important;
 }
 
-.bg-greyblue {
-  background: rgb(18, 42, 88) !important;
-  color: rgb(123, 148, 194);
+.bg-darkpurple {
+  background: #0F043F !important;
+  color: $white;
+}
+
+.bg-white {
+  background: $white !important;
+  color: $green;
 }
 
 .main-header {
@@ -313,6 +320,15 @@
   border: none;
 }
 
+.card.white {
+  margin: 10px 0 10px 0;
+  background-color: #e0e0e0 !important;
+  color: #616161 !important;
+  border-bottom-right-radius: 0.3rem !important;
+  border-top-right-radius: 0.3rem !important;
+  border: none;
+}
+
 .appBar {
   padding: 10px 20px;
   text-align: center;
@@ -408,6 +424,18 @@
 .submit_button {
   background: $purple !important;
   color: $white;
+  font-weight: bold;
+  border-radius: 25px;
+  width: 100%;
+  height: 48px;
+  display: block;
+  font-size: 16px;
+
+}
+
+.signout_button {
+  background: #FF5050 !important;
+  color: $white!important;
   font-weight: bold;
   border-radius: 25px;
   width: 100%;
@@ -976,10 +1004,13 @@ p.text-black{
   color: #000000;
 }
 
-h1.text-title{
+.text-head-title{
+  color: #313131;
+}
+
+.text-title{
   color: $green;
   font-weight: 600;
-  font-size: 40px;
   line-height: 46.88px;
 }
 
@@ -993,6 +1024,15 @@ span.text-unlock-purple{
   color: #5211EE;
 }
 
-span.text-unlock-green{
+.text-unlock-green{
   color: $green;
+}
+
+.text-grey{
+  color: #A8A8A8;
+}
+
+hr{
+  margin-top: 1rem!important;
+  margin-bottom: 1rem!important;
 }
