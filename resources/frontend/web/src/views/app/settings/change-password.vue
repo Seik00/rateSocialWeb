@@ -4,34 +4,31 @@
       <a @click="$router.go(-1)">
         <img src="../../../assets/images/digital/right.svg" alt="">
       </a>
-      <span>{{ $t("change_password") }}</span>
+      <!-- <span>{{ $t("change_password") }}</span> -->
     </div>
     <b-form @submit.prevent="sendOTP">
       <div class="mainpage">
-        <b-form-group class="form-customize" id="input-group-2" :label="$t('email')" label-for="input-2">
-          <!-- <b-form-input class="form-custom"
-            id="input-2"
-            v-model="email"
-            type="text"
-            readonly
-            required
-          ></b-form-input> -->
+        <div class="text-left mb-2 mt-5">
+          <h1 class="text-title mb-0">{{ $t("change_password")}}</h1>
+        </div>
+        
+        <b-form-group class="form-customize mt-3" id="input-group-2">
           <b-input-group>
-            <!-- <b-input-group-prepend>
-              <span class="">{{ country }}</span>
-            </b-input-group-prepend> -->
-            <b-form-input class="form-custom" v-model="email" readonly>
+            <b-form-input class="form-control form-custom" v-model="email" :placeholder="$t('email')" readonly>
             </b-form-input>
           </b-input-group>
         </b-form-group>
 
-        <b-form-group class="form-customize" id="input-group-2" :label="$t('vcode')" label-for="input-2">
+        <b-form-group class="form-customize mt-3" id="input-group-2">
           <b-input-group>
-            <b-form-input class="form-custom" label="text" type="number" v-model="otp" required>
+            <b-form-input class="form-control form-custom" label="text" type="number" v-model="otp" :placeholder="$t('vcode')" required>
             </b-form-input>
-            <b-input-group-append class=" position-relative align-items-center">
-              <b-button variant="primary" :disabled="startCount || sending" @click="getOTP">
-                <span v-if="!sending">{{ $t("get_vcode") }}</span><span v-else class="text-white">{{ $t("loading...")
+            <b-input-group-append class="form-custom-append" style="position: relative">
+              <b-button variant="light" style="
+                      border-bottom-right-radius: 0.5rem !important;
+                      border-top-right-radius: 0.5rem !important;
+                    " :disabled="startCount || sending" @click="getOTP">
+                <span v-if="!sending">{{ $t("getCode") }}</span><span v-else class="text-white">{{ $t("loading...")
                 }}</span>
               </b-button>
               <div v-if="startCount" class="text-center py-2 overlay-text">
@@ -41,18 +38,22 @@
           </b-input-group>
         </b-form-group>
 
-
-        <b-form-group class="form-customize" id="input-group-2" :label="$t('old_password')" label-for="input-2">
-          <b-form-input class="form-custom" id="input-2" v-model="old_password" type="password" required></b-form-input>
+        <b-form-group class="form-customize mt-3" id="input-group-2">
+          <b-input-group>
+            <b-form-input class="form-control form-custom" v-model="old_password" type="password" :placeholder="$t('old_password')" required></b-form-input>
+          </b-input-group>
         </b-form-group>
 
-        <b-form-group class="form-customize" id="input-group-2" :label="$t('new_password')" label-for="input-2">
-          <b-form-input class="form-custom" id="input-2" v-model="password" type="password" required></b-form-input>
+        <b-form-group class="form-customize mt-3" id="input-group-2">
+          <b-input-group>
+            <b-form-input class="form-control form-custom" id="input-2" v-model="password" type="password" :placeholder="$t('new_password')" required></b-form-input>
+          </b-input-group>
         </b-form-group>
 
-        <b-form-group class="form-customize" id="input-group-2" :label="$t('confirm_new_password')" label-for="input-2">
-          <b-form-input class="form-custom" id="input-2" v-model="password_confirmation" type="password"
-            required></b-form-input>
+        <b-form-group class="form-customize mt-3" id="input-group-2">
+          <b-input-group>
+            <b-form-input class="form-control form-custom" id="input-2" v-model="password_confirmation" type="password" :placeholder="$t('confirm_new_password')" required></b-form-input>
+          </b-input-group>
         </b-form-group>
 
         <b-button class="mx-auto submit_button" style="margin-top: 20vh" variant="outline-secondary" type="submit">{{

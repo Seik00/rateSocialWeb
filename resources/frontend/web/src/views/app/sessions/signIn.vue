@@ -179,7 +179,6 @@ export default {
 
 <style>
 .input-group{
-    border-bottom: 1px solid #8AA3CF !important;
     margin-bottom: 2rem !important;
 
 }

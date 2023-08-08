@@ -271,7 +271,8 @@
     border: 1px solid #09E17D !important;
     color: black!important;
     border-radius: 0.3rem !important;
-    padding: 16px 16px
+    padding: 16px 16px;
+    height: 48px;
   }
 
   .form-custom-prepend {
@@ -280,6 +281,7 @@
     color: black!important;
     border-bottom-left-radius: 0.3rem !important;
     border-top-left-radius: 0.3rem !important;
+    height: 48px;
 
     :focus {
       border: none;
@@ -294,6 +296,7 @@
     border-bottom-right-radius: 0.3rem !important;
     border-top-right-radius: 0.3rem !important;
     border: 1px solid #09E17D !important;
+    height: 48px;
 
     button {
       color: black!important;
@@ -370,7 +373,6 @@
   .label {
     color: #fbca2a;
     font-weight: bold;
-    border: 1px solid #fbca2a;
     border-radius: 20px;
     font-size: 10px;
     letter-spacing: 0px;
@@ -967,7 +969,7 @@
 }
 
 .input-group [type="text"].form-custom {
-  height: 38px;
+  height: 48px;
 
 }
 

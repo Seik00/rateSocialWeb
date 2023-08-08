@@ -117,6 +117,54 @@
           </b-link>
       </b-card>
 
+      <b-card class="mb-3 mt-4 p-2 bg-white">
+        <h5 class="font-weight-bold mb-4 text-head-title">{{ $t('security') }}</h5>
+          <b-link to="/web/settings/change-password">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/withdraw_details.png" alt="">
+                </div>
+
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("change_password") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
+            </div>
+          </b-link>
+          <hr/>
+          <b-link to="/web/settings/change-sec-password">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/profile.png" alt="">
+                </div>
+
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("change_secpassword") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
+            </div>
+          </b-link>
+          <hr/>
+          <b-link to="/web/settings/forget-sec-password">
+            <div class="list-box">
+              <b-row align-h="start" align-v="center" class="m-0">
+                <div class="text-center text-18">
+                  <img src="../../../assets/images/profile/profile.png" alt="">
+                </div>
+
+                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                  {{ $t("forget_secpassword") }}
+                </h6>
+                <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
+              </b-row>
+            </div>
+          </b-link>
+      </b-card>
+
       <!-- <span class="font-weight-bold">{{ $t('More') }}</span>
       <b-card class="bg-greyblue">
         <b-link to="/web/settings/settingCenter">
