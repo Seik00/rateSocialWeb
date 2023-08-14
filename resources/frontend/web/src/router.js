@@ -26,6 +26,18 @@ const routes = [
         component: () => import("./views/app/dashboard/dashboard"),
       },
       {
+        path: "/web/rating",
+        component: () => import("./views/app/rating"),
+        redirect: "/web/rating/home",
+        children: [
+          {
+            path: "home",
+            component: () => import("./views/app/rating/home"),
+          },
+    
+        ]
+      },
+      {
         path: "/web/boost",
         // beforeEnter: checkSecPassword,
         component: () => import("./views/app/boost"),
@@ -47,11 +59,11 @@ const routes = [
             component: () => import("./views/app/trade/tradeList"),
 
           },
-  
+
           {
             path: "/web/trade/tradeChart",
             component: () => import("./views/app/trade/tradeChart"),
-        
+
           },
         ]
       },
@@ -298,7 +310,19 @@ const routes = [
     beforeEnter: checkSecPassword,
     component: () => import("./views/app/boost/boostPage"),
   },
+  {
+    path: "/web/referral",
+    beforeEnter: checkSecPassword,
+    component: () => import("./views/app/referral"),
+    redirect: "/web/referral/bonus",
+    children: [
+      {
+        path: "bonus",
+        component: () => import("./views/app/referral/bonus"),
+      },
 
+    ]
+  },
 
   {
     path: "/web/settings",
@@ -330,7 +354,7 @@ const routes = [
 
     ]
   },
-  
+
   {
     path: "/web/ticket",
     // beforeEnter: checkSecPassword,
@@ -352,7 +376,7 @@ const routes = [
       },
     ]
   },
-  
+
   {
     path: "/web/settings/set-sec-password",
     component: () => import("./views/app/settings/set-sec-password"),

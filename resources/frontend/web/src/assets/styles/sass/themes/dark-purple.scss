@@ -2,7 +2,7 @@
 @import "colors";
 
 $white: #ffffff !default;
-$blue: #001c42 !default;
+$blue: #15065A !default;
 $indigo: #6610f2 !default;
 $purple: #663399 !default;
 $pink: #e83e8c !default;
@@ -15,7 +15,7 @@ $cyan: #9c27b0 !default;
 $grey-r: #6c7293 !default;
 $grey-l: #a7abc3 !default;
 $grey-light: #8AA3CF  !default;
-$primary-base: $grey-light;
+$primary-base: $blue;
 $white: darken(desaturate($primary-base, 40), 25) !default;
 $gray-100: darken(desaturate($primary-base, 40), 20) !default;
 $gray-200: darken(desaturate($primary-base, 40), 15) !default;
@@ -37,7 +37,7 @@ $light: $gray-500 !default;
 $dark: $gray-900 !default;
 $background: $white !default;
 $foreground: $grey-light !default;
-$heading: #fff;
+$heading: #8E8E8E;
 // dark version
 $dark-bg: #10163a;
 $dark-forground: #1c233f;

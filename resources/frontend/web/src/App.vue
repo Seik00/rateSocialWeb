@@ -26,7 +26,7 @@ export default {
   metaInfo() {
     return {
       // if no subcomponents specify a metaInfo.title, this title will be used
-      title: "GreatWall",
+      title: "Asia Pacific",
       // all titles will be injected into this template
       titleTemplate: "%s",
       bodyAttrs: {
@@ -37,7 +37,7 @@ export default {
       },
       meta: [
         { charset: "utf-8" },
-        { name: "description", content: "WHY GreatWall ? GreatWall is developed with Artificial Intelligence Martingale calculation formula to replace human's Hedging Trading Strategy, using Crypto market cap's, market volume and historical data." },
+        { name: "description", content: "WHY Asia Pacific ? Asia Pacific is developed with Artificial Intelligence Martingale calculation formula to replace human's Hedging Trading Strategy, using Crypto market cap's, market volume and historical data." },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
     };

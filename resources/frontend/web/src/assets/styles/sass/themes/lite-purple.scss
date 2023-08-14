@@ -13,7 +13,7 @@ $teal: map-get($solid-colors, "teal") !default;
 $cyan: map-get($solid-colors, "cyan") !default;
 $white: #fff !default;
 $grey-light: #8AA3CF  !default;
-$primary-base: $grey-light;
+$primary-base: $blue;
 $gray-100: #f8f9fa !default;
 $gray-200: #eee !default;
 $gray-300: #dee2e6 !default;
@@ -34,7 +34,7 @@ $light: $gray-500 !default;
 $dark: $gray-900 !default;
 $background: $blue !default;
 $foreground: $grey-light !default;
-$heading: $white;
+$heading: #8E8E8E;
 // $heading: darken($foreground, 8%);
 // blue dark
 // $dark-forground: #171355;

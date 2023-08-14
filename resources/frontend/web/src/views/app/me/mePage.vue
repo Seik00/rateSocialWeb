@@ -1,7 +1,7 @@
 <template>
   <div class="main-content" style="padding-bottom: 15vh;">
     <!-- <div class="appBar text-right">
-      <img width="22px" src="../../../assets/images/digital/transaction.svg" alt="">
+      <img width="22px" src="../../../assets/images/digital/transaction.svg" alt="" height="24px">
     </div> -->
     <div style="padding:30px 20px">
 
@@ -27,7 +27,7 @@
       <b-card class="mb-3 mt-4 p-2 bg-darkpurple">
         <div class="d-flex justify-content-between align-items-end mb-3">
           
-          <h5 class="font-weight-bold mb-0">{{ $t('balance') }}</h5>
+          <h6 class="font-weight-bold mb-0">{{ $t('balance') }}</h6>
           <span class="text-14 text-white font-weight-bold">{{ currentPackage}} <img height="14px" src="../../../assets/images/digital/currency.svg" alt=""></span>
         </div>
         <div class="d-flex align-items-end">
@@ -42,10 +42,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/two-arrows (2) 1.png" alt="">
+                  <img src="../../../assets/images/profile/two-arrows (2) 1.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("deposit") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -57,10 +57,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/atm 1.png" alt="">
+                  <img src="../../../assets/images/profile/atm 1.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("withdraw") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -72,10 +72,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/atm 1 (1).png" alt="">
+                  <img src="../../../assets/images/profile/atm 1 (1).png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("transaction") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -90,10 +90,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/withdraw_details.png" alt="">
+                  <img src="../../../assets/images/profile/withdraw_details.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("withdraw_details") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -105,10 +105,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/profile.png" alt="">
+                  <img src="../../../assets/images/profile/profile.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("edit_profile") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -123,10 +123,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/withdraw_details.png" alt="">
+                  <img src="../../../assets/images/profile/withdraw_details.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("change_password") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -138,10 +138,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/profile.png" alt="">
+                  <img src="../../../assets/images/profile/profile.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("change_secpassword") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -153,10 +153,10 @@
             <div class="list-box">
               <b-row align-h="start" align-v="center" class="m-0">
                 <div class="text-center text-18">
-                  <img src="../../../assets/images/profile/profile.png" alt="">
+                  <img src="../../../assets/images/profile/profile.png" alt="" height="24px">
                 </div>
 
-                <h6 class="mb-0 mx-3 text-16 font-weight-bold text-unlock-green">
+                <h6 class="mb-0 mx-4 text-16 font-weight-bold text-unlock-green">
                   {{ $t("forget_secpassword") }}
                 </h6>
                 <i class="fa fa-angle-right" style="right: 30px; position: absolute; color: #09E17D;font-size: 19px;"></i>
@@ -171,7 +171,7 @@
           <div class="list-box">
             <b-row align-h="start" align-v="center" class="m-0">
               <div class="text-center text-18">
-                <img src="../../../assets/images/digital/setting.svg" alt="">
+                <img src="../../../assets/images/digital/setting.svg" alt="" height="24px">
               </div>
 
               <h6 class="mb-0 mx-3 text-10 text-primary">
@@ -185,7 +185,7 @@
           <div class="list-box">
             <b-row align-h="start" align-v="center" class="m-0">
               <div class="text-center text-18">
-                <img src="../../../assets/images/digital/ticket (3).svg" alt="">
+                <img src="../../../assets/images/digital/ticket (3).svg" alt="" height="24px">
               </div>
 
               <h6 class="mb-0 mx-3 text-10 text-primary">
@@ -214,7 +214,7 @@
         <div class="list-box" @click="openRecord">
           <b-row align-h="start" align-v="center" class="m-0">
             <div class="text-center text-18">
-              <img src="../../../assets/images/digital/paper.svg" alt="">
+              <img src="../../../assets/images/digital/paper.svg" alt="" height="24px">
             </div>
 
             <h6 class="mb-0 mx-3 text-10 text-primary">

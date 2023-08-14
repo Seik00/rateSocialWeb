@@ -70,7 +70,7 @@ import { getDownloadLink } from "../../../system/api/api";
 export default {
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "GreatWall",
+    title: "Asia Pacific",
   },
   data() {
     return {

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content homepage2 flex-grow-1 d-flex flex-column pb-5" style="height:100vh">
+  <div class="main-content homepage2 flex-grow-1 d-flex flex-column">
     <!-- <div class="firstPart">
       <div class="banner"></div>
     </div> -->
@@ -27,53 +27,95 @@
         </div>
 
       </b-card>
+      <div class="d-flex justify-content-between">
+        <h5 class="font-weight-medium">{{ $t('earnings') }}</h5>
+        <span class="text-14 text-black font-weight-bold">{{ currentPackage }} <img height="14px"
+            src="../../../assets/images/digital/currency.svg" alt=""></span>
+      </div>
+      <b-row class="mx-0 mb-4">
+        <b-col cols="6" class="pl-0 pr-3">
+          <b-card class="card-primary">
+            <div class="d-flex">
+              <div class="mr-2 h-100 flex-grow-1" style="aspect-ratio: 1;"></div>
+              <div>
+                <span class="text-10 text-white">Today App Rated</span>
+                <h5 class="text-white mb-0"><span class="font-weight-bold">10</span> <span class="text-10">/35</span></h5>
+              </div>
+
+            </div>
+
+          </b-card></b-col>
+        <b-col cols="6" class="pr-0 pl-3">
+          <b-card>
+            <div class="d-flex">
+              <div class="mr-1 h-100 flex-grow-1" style="aspect-ratio: 1;"></div>
+              <div>
+                <span class="text-10 text-green">Today App Rated</span>
+                <h5 class="text-green mb-0"><span class="font-weight-bold">10</span> </h5>
+              </div>
+
+            </div>
+
+          </b-card></b-col>
+      </b-row>
+      <h5 class="font-weight-medium">{{ $t('features') }}</h5>
       <b-row class="">
         <b-col cols="4" class="">
           <b-link to="/web/deposit" class="btn">
-            <span class="mb-5 text-white">{{ $t('deposit') }}</span>
-            <div class="d-flex justify-content-between align-items-center w-100 mt-3">
-              <i class="fa fa-arrow-right"></i>
-              <span class="text-24 mb-2"><img src="../../../assets/images/digital/deposit.svg" alt=""></span>
+            <div class="d-flex flex-column justify-content-center align-items-center w-100 my-3">
+              <span class="text-24 mb-2"><img src="../../../assets/images/digital/deposit.png" alt=""></span>
+              <span class="text-center text-primary">{{ $t('deposit') }}</span>
             </div>
           </b-link>
         </b-col>
         <b-col cols="4" class="">
           <b-link to="/web/withdraw" class="btn">
-            <span class="mb-5 text-white">{{ $t('withdraw') }}</span>
-            <div class="d-flex justify-content-between align-items-center w-100 mt-3">
-              <i class="fa fa-arrow-right"></i>
-              <span class="text-24 mb-2"><img src="../../../assets/images/digital/Solid.svg" alt=""></span>
+            <div class="d-flex flex-column justify-content-between align-items-center w-100 my-3">
+              <span class="text-24 mb-2"><img src="../../../assets/images/digital/withdraw.png" alt=""></span>
+
+              <span class="text-center text-primary">{{ $t('withdraw') }}</span>
             </div>
           </b-link>
         </b-col>
         <b-col cols="4" class="">
           <b-link to="/web/ticket/createTicket" class="btn">
-            <span class="mb-5 text-white">{{ $t('contact_service') }}</span>
-            <div class="d-flex justify-content-between align-items-center w-100 mt-3">
-              <i class="fa fa-arrow-right"></i>
-              <span class="text-24 mb-2"><img src="../../../assets/images/digital/Layer 2.svg" alt=""></span>
+            <div class="d-flex flex-column justify-content-between align-items-center w-100 my-3">
+
+              <span class="text-24 mb-2"><img src="../../../assets/images/digital/event.png" alt=""></span>
+              <span class="text-center text-primary">{{ $t('contact_service') }}</span>
             </div>
           </b-link>
         </b-col>
       </b-row>
-      <Market :isHome="true"></Market>
-      <p class="text-center text-16 cursor-pointer" style="height:100px;" @click="$router.push('/web/trade/tradeList')">{{ $t('more') }}
-        <span><img src="../../../assets/images/digital/right-arrow (5).svg" alt=""></span></p>
-      <!-- <b-row class="mx-0">
-        <b-col cols="6" class="">
-          <b-button class="btn-tab btn-rounded mt-3" :class="{ 'btn-focus': tabIndex == 0 }" @click="changeIndex(0)">
-            <span>{{ $t('latest_news') }}</span>
-          </b-button>
+      <b-row class="mt-3">
+        <b-col cols="4" class="">
+          <b-link to="/web/myWallet/walletRecord" class="btn">
+            <div class="d-flex flex-column justify-content-between align-items-center w-100 my-3">
+
+              <span class="text-24 mb-2"><img src="../../../assets/images/digital/transaction.png" alt=""></span>
+              <span class="text-center text-primary">{{ $t('transaction') }}</span>
+            </div>
+          </b-link>
         </b-col>
-        <b-col cols="6" class="">
-          <b-button class="btn-tab btn-rounded mt-3" :class="{ 'btn-focus': tabIndex == 1 }" @click="changeIndex(1)">
-            <span>{{ $t('tnc') }}</span>
-          </b-button>
+        <b-col cols="4" class="">
+          <b-link to="/web/referral/bonus" class="btn">
+            <div class="d-flex flex-column justify-content-between align-items-center w-100 my-3">
+
+              <span class="text-24 mb-2"><img src="../../../assets/images/digital/referral.png" alt=""></span>
+              <span class="text-center text-primary">{{ $t('referral') }}</span>
+            </div>
+          </b-link>
         </b-col>
-      </b-row> -->
-      <!-- <p class="mb-1">{{ ($i18n.locale=="zh")?language:languageEN }}</p> -->
-      <!-- <newsList v-if="tabIndex == 0"></newsList>
-      <tnc v-if="tabIndex == 1"></tnc> -->
+        <b-col cols="4" class="">
+          <b-link to="/web/ticket/createTicket" class="btn">
+            <div class="d-flex flex-column justify-content-between align-items-center w-100 my-3">
+
+              <span class="text-24 mb-2"><img src="../../../assets/images/digital/vip.png" alt=""></span>
+              <span class="text-center text-primary">{{ $t('vip_level') }}</span>
+            </div>
+          </b-link>
+        </b-col>
+      </b-row>
 
     </div>
 
@@ -84,16 +126,12 @@
 <script>
 import { mapGetters } from "vuex";
 import Dialog from "../../../components/dialog.vue";
-import Market from "../trade/modules/tradeMarket.vue"
-// import newsList from "../me/newsList.vue";
-// import tnc from "../me/tnc.vue";
 export default {
   computed: {
     ...mapGetters(["lang"]),
   },
   components: {
     Dialog,
-    Market
     // newsList,
     // tnc,
   },

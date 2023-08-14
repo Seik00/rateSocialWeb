@@ -8,6 +8,7 @@
            
             <div class="tap-box" v-if="this.$route.path.includes('dashboard')">
               <img  class="nav-icon" src="../../../assets/images/footer/home_select.png" alt="">
+              <div class="flex-grow-1"></div>
               <span class="text-unlock-purple">{{ $t("home") }}</span>
             </div>
             <img v-else class="nav-icon" src="../../../assets/images/footer/home_normal.png" alt="">
@@ -16,11 +17,12 @@
         </b-col>
 
         <b-col cols="3" class="px-0">
-          <router-link  to="/web/myWallet/walletRecord" class="nav-item-hold">
+          <router-link  to="/web/rating/home" class="nav-item-hold">
            
-            <div class="tap-box" v-if="this.$route.path.includes('walletRecord')">
+            <div class="tap-box" v-if="this.$route.path.includes('rating')">
               <img  class="nav-icon" src="../../../assets/images/footer/star_select.png" alt="">
-              <span class="text-unlock-purple">{{ $t("record") }}</span>
+              <div class="flex-grow-1"></div>
+              <span class="text-unlock-purple">{{ $t("rating") }}</span>
             </div>
             <img v-else class="nav-icon" src="../../../assets/images/footer/star_normal.png" alt="">
             
@@ -32,6 +34,7 @@
            
             <div class="tap-box" v-if="this.$route.path.includes('boostPage')">
               <img  class="nav-icon" src="../../../assets/images/footer/wallet_select.png" alt="">
+              <div class="flex-grow-1"></div>
               <span class="text-unlock-purple">{{ $t("rating") }}</span>
             </div>
             <img v-else class="nav-icon" src="../../../assets/images/footer/wallet_normal.png" alt="">
@@ -44,6 +47,7 @@
            
             <div class="tap-box" v-if="this.$route.path.includes('mePage')">
               <img  class="nav-icon" src="../../../assets/images/footer/profile_select.png" alt="">
+              <div class="flex-grow-1"></div>
               <span class="text-unlock-purple">{{ $t("profile") }}</span>
             </div>
             <img v-else class="nav-icon" src="../../../assets/images/footer/profile_normal.png" alt="">

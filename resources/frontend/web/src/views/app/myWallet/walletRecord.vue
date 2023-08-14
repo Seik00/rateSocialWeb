@@ -1,13 +1,18 @@
 <template>
-  <div class="main-content d-flex flex-column flex-grow-1  mx-3 ">
+  <div class="main-content d-flex flex-column flex-grow-1 px-4 ">
     <div class="appBar">
-      <span>{{ $t("record") }}</span>
+      <a @click="$router.go(-1)">
+        <img src="../../../assets/images/digital/right.svg" alt="">
+      </a>
     </div>
-
-
-    <b-row align-h="center" style="margin-bottom: 10px">
+    <h3 class="mb-3 font-weight-bold text-black">{{ $t("transaction") }}</h3>
+    <div class="d-flex pb-3" style="overflow-x: scroll;">
+      <div class="card-option mr-2" :class="{'active':selectedType==item}" v-for="item in option" :key="item" @click="selectedType=item">
+        {{ $t(item) }}
+      </div>
+    </div>
+    <b-row align-h="center" class="mt-2" style="margin-bottom: 10px">
       <b-col cols="6" style="text-align: left">
-
         <b-card class="mb-3 bg-greyblue px-0">
           <div class="d-flex">
             <p class="text-10 font-weight-bold mb-0">{{ $t('today_income') }}</p>
@@ -117,10 +122,12 @@ export default {
   },
   data() {
     return {
+      selectedType: 'deposit',
       isLoading: true,
       point1: [],
       dataList: [],
       canClear: false,
+      option: ['deposit', 'withdraw', 'referral', 'earning'],
       wallet: "point1",
       wallet2: "point2",
       totalRecords: 0,

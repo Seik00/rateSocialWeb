@@ -1,23 +1,15 @@
 <template>
   <div class="main-content">
-    <div class="appBar">
-      <a @click="$router.go(-1)">
-        <img src="../../../assets/images/digital/right.svg" alt="">
-      </a>
-      <span>{{ $t("deposit") }}</span>
-      <!-- <a
-        class="right-side"
-        @click="checkType"
-      >
-        <i class="fa fa-history"></i>
-      </a> -->
-    </div>
     <div class="mainpage">
-      <!-- <p class="mb-0">{{ $t("depositHint1") }}</p>
-      <p class="mb-0">{{ $t("depositHint2") }}</p>
-      <span class="text-danger">{{ $t("depositWarning") }}</span> -->
-      <b-row align-h="between" class="mt-3 ">
-       
+      <div class="appBar">
+        <a @click="$router.go(-1)">
+          <img src="../../../assets/images/digital/right.svg" alt="">
+        </a>
+      </div>
+      <b-row align-h="between" class="mt-2 ">
+        <b-col cols="12">
+          <h3 class="mb-3 font-weight-bold text-black">{{ $t("deposit") }}</h3>
+        </b-col>
         <b-col cols="12">
           <div class="tabContainer text-center" :class="{ active: selected == 0 }" @click="selectIndex(0)">
             <div class="tabImage">
@@ -41,7 +33,7 @@
           </b-form-select>
         </b-form-group> -->
 
-        
+
 
         <b-form-group :label="$t('address')" class="form-customize mt-3">
           <b-input-group>
@@ -56,17 +48,9 @@
           </b-input-group>
         </b-form-group>
 
-        <b-form-group
-          :label="$t('coinPair')"
-          class="form-customize mt-3"
-        >
+        <b-form-group :label="$t('coinPair')" class="form-customize mt-3">
           <b-input-group>
-            <b-form-input
-              class="form-control form-custom"
-              v-model="newCoinType"
-              type="text"
-              readonly
-            >
+            <b-form-input class="form-control form-custom" v-model="newCoinType" type="text" readonly>
             </b-form-input>
             <b-input-group-append class="form-custom-append">
             </b-input-group-append>
@@ -111,7 +95,7 @@
 
         <b-button class="mx-auto submit_button mt-5" variant="outline-secondary" type="submit" :disabled="isLoading">{{
           isLoading ? $t("submitting") : $t("depositDone") }}</b-button>
-      
+
 
         <!-- <b-button
           class="mx-auto submit_button mt-5"
@@ -269,7 +253,7 @@
         <b-button class="mx-auto submit_button mt-5" variant="outline-secondary" type="submit" :disabled="isLoading">{{
           isLoading ? $t("submitting") : $t("depositDone") }}</b-button>
       </b-form>
-      
+
     </div>
     <Dialog ref="msg"></Dialog>
   </div>
@@ -358,7 +342,7 @@ export default {
     clipboardErrorHandler() { },
     selectIndex(i) {
       this.selected = i;
-      this.deposit_type = this.selected == 0 ?'bank':'crypto';
+      this.deposit_type = this.selected == 0 ? 'bank' : 'crypto';
       this.sec_pwd = "";
     },
     uploadImage() {
@@ -571,7 +555,7 @@ export default {
       const file = e.target.files[0];
       this.image = file;
       if (!file.type.includes("image/")) {
-        alert("Please select an image file"); 
+        alert("Please select an image file");
         return;
       }
       if (typeof FileReader === "function") {
@@ -609,7 +593,7 @@ export default {
         .then(function (value) {
           self.isLoading = false;
           self.newCoinAddress = value.data.data.system.DEPOSIT_ADDRESS;
-         
+
         })
         .catch(function (error) {
           self.isLoading = false;
