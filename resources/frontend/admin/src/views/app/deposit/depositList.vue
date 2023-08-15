@@ -117,17 +117,24 @@
             </span>
             <span v-else style="color: green"> +{{ props.row.found }} </span>
           </span>
-          <span v-else-if="props.column.field == 'bank_name'">
+          <span v-else-if="props.column.field == 'bank_country'">
             <span>
-              {{ props.row.user_bank }}
+              {{ props.row.user.user_bank.country.name_en }}
             </span>
           </span>
-          <span v-else-if="props.column.field == 'country'">
-            <span v-if="$i18n.locale == 'zh'">
-              {{ props.row.country.name }}
+          <span v-else-if="props.column.field == 'bank_user'">
+            <span>
+              {{ props.row.user.user_bank.bank_user }}
             </span>
-            <span v-else>
-              {{ props.row.country.name_en }}
+          </span>
+          <span v-else-if="props.column.field == 'bank_name'">
+            <span>
+              {{ props.row.user.user_bank.bank_name }}
+            </span>
+          </span>
+          <span v-else-if="props.column.field == 'bank_number'">
+            <span>
+              {{ props.row.user.user_bank.bank_number }}
             </span>
           </span>
           <span v-else-if="props.column.field == 'status'">
@@ -268,6 +275,22 @@ export default {
           sortable: false,
         },
         {
+          label: this.$t("country"),
+          text: "bank_country",
+          field: "bank_country",
+          thClass: "gull-th-class",
+          value: "bank_country",
+          sortable: false,
+        },
+        {
+          label: this.$t("bank_user"),
+          text: "bank_user",
+          field: "bank_user",
+          thClass: "gull-th-class",
+          value: "bank_user",
+          sortable: false,
+        },
+        {
           label: this.$t("bank_name"),
           text: "bank_name",
           field: "bank_name",
@@ -276,11 +299,11 @@ export default {
           sortable: false,
         },
         {
-          label: this.$t("country"),
-          text: "country",
-          field: "country",
+          label: this.$t("bank_number"),
+          text: "bank_number",
+          field: "bank_number",
           thClass: "gull-th-class",
-          value: "country",
+          value: "bank_number",
           sortable: false,
         },
         {
