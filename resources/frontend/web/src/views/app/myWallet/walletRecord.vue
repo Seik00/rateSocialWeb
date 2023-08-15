@@ -5,7 +5,7 @@
         <img src="../../../assets/images/digital/right.svg" alt="">
       </a>
     </div>
-    <h3 class="mb-3 font-weight-bold text-black">{{ $t("transaction") }}</h3>
+    <h3 class="mb-3 font-weight-bold text-34 text-black">{{ $t("transaction") }}</h3>
     <div class="d-flex pb-3" style="overflow-x: scroll;">
       <div class="card-option mr-2" :class="{'active':selectedType==item}" v-for="item in option" :key="item" @click="selectedType=item">
         {{ $t(item) }}

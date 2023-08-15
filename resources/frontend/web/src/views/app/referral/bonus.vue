@@ -5,7 +5,7 @@
                 <img src="../../../assets/images/digital/right.svg" alt="">
             </a>
         </div>
-        <h3 class="mb-3 font-weight-bold text-black">{{ $t("referral_bonus") }}</h3>
+        <h3 class="mb-3 font-weight-bold text-34 text-black">{{ $t("referral_bonus") }}</h3>
         <div class="bg-green p-4 position-relative" style="border-radius: 12px;">
             <h5 class="text-greenDark font-weight-bold">Refer a friend and get bonus while they
                 deposits </h5>

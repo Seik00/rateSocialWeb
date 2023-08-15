@@ -8,7 +8,7 @@
       </div>
       <b-row align-h="between" class="mt-2 ">
         <b-col cols="12">
-          <h3 class="mb-3 font-weight-bold text-black">{{ $t("deposit") }}</h3>
+          <h3 class="mb-3 font-weight-bold text-34 text-black">{{ $t("deposit") }}</h3>
         </b-col>
         <b-col cols="12">
           <div class="tabContainer text-center" :class="{ active: selected == 0 }" @click="selectIndex(0)">

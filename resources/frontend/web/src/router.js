@@ -34,6 +34,10 @@ const routes = [
             path: "home",
             component: () => import("./views/app/rating/home"),
           },
+          {
+            path: "record",
+            component: () => import("./views/app/rating/record"),
+          },
     
         ]
       },
