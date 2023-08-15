@@ -341,24 +341,24 @@
                 class="Ul_collapse"
                 :class="{ 'vertical-item-name': getVerticalCompact.isItemName }"
               >
-                <!-- <li>
-                  <router-link tag="a" to="/manage/deposit/requestDeposit">
+                <li>
+                  <router-link tag="a" to="/manage/deposit/depositManage">
                     <i class="i-Circular-Point mr-2"></i>
-                    <span class="">{{ $t("deposit_request") }}</span>
+                    <span class="">{{ $t("depositManage") }}</span>
                   </router-link>
-                </li> -->
+                </li>
                 <li>
                   <router-link tag="a" to="/manage/deposit/depositList">
                     <i class="i-Circular-Point mr-2"></i>
                     <span class="">{{ $t("depositList") }}</span>
                   </router-link>
                 </li>
-                <li>
+                <!-- <li>
                   <router-link tag="a" to="/manage/deposit/depositCoinList">
                     <i class="i-Circular-Point mr-2"></i>
                     <span class="">{{ $t("depositCoinList") }}</span>
                   </router-link>
-                </li>
+                </li> -->
                 <!-- <li>
                   <router-link tag="a" to="/manage/deposit/reloadDeposit">
                     <i class="i-Circular-Point mr-2"></i>

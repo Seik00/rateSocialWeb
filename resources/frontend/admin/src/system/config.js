@@ -1,5 +1,5 @@
 const config = {
-    url: 'https://api.digitalalpha.network/'
+    url: 'https://socialrateapi.greatwallsolution.com/'
     //url: 'https://atozbot.live/'
 }
 

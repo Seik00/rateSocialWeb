@@ -197,8 +197,8 @@ const routes = [
         meta: { permission: '4' },
         children: [
           {
-            path: "requestDeposit",
-            component: () => import("./views/app/deposit/requestDeposit"),
+            path: "depositManage",
+            component: () => import("./views/app/deposit/depositManage"),
             meta: { permission: '41' },
           },
           {

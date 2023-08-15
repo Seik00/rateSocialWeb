@@ -117,6 +117,11 @@
             </span>
             <span v-else style="color: green"> +{{ props.row.found }} </span>
           </span>
+          <span v-else-if="props.column.field == 'bank_name'">
+            <span>
+              {{ props.row.user_bank }}
+            </span>
+          </span>
           <span v-else-if="props.column.field == 'country'">
             <span v-if="$i18n.locale == 'zh'">
               {{ props.row.country.name }}
@@ -142,38 +147,7 @@
               }}</b-badge>
             </span>
           </span>
-          <span v-else-if="props.column.field == 'document'">
-            <span>
-               <img :src="props.row.uploaded_file[0].public_image_path" height="50">
-                <button
-                  class="my-auto mx-2"
-                  type="button"
-                  v-clipboard="() => props.row.uploaded_file[0].public_image_path"
-                  v-clipboard:success="clipboardSuccessHandler"
-                  v-clipboard:error="clipboardErrorHandler"
-                  >
-                  <span>{{ $t("copy") }}</span>
-                </button>
-            </span>
-          </span>
-          <!-- <span v-else-if="props.column.field == 'wallet_type'">
-            <span v-if="$i18n.locale == 'zh'">
-              <span v-if="props.row.action == '+'">
-                {{ wallets[props.row.in_type].comments_cn }}
-              </span>
-              <span v-else>
-                {{ wallets[props.row.out_type].comments_cn }}
-              </span>
-            </span>
-            <span v-else>
-              <span v-if="props.row.action == '+'">
-                {{ wallets[props.row.in_type].comments_en }}
-              </span>
-              <span v-else>
-                {{ wallets[props.row.out_type].comments_en }}
-              </span></span
-            >
-          </span> -->
+        
           <span v-else-if="props.column.field == 'created_at'">
             {{ props.row.created_at }}
           </span>
@@ -294,6 +268,14 @@ export default {
           sortable: false,
         },
         {
+          label: this.$t("bank_name"),
+          text: "bank_name",
+          field: "bank_name",
+          thClass: "gull-th-class",
+          value: "bank_name",
+          sortable: false,
+        },
+        {
           label: this.$t("country"),
           text: "country",
           field: "country",
@@ -309,28 +291,12 @@ export default {
           value: "amount",
           sortable: false,
         },
-        // {
-        //   label: this.$t("pay_amount"),
-        //   text: "pay_amount",
-        //   field: "pay_amount",
-        //   thClass: "gull-th-class",
-        //   value: "pay_amount",
-        //   sortable: false,
-        // },
         {
           label: this.$t("status"),
           text: "status",
           field: "status",
           thClass: "gull-th-class",
           value: "status",
-          sortable: false,
-        },
-        {
-          label: this.$t("image"),
-          text: "document",
-          field: "document",
-          thClass: "gull-th-class",
-          value: "document",
           sortable: false,
         },
         {
@@ -341,12 +307,12 @@ export default {
           value: "created_at",
           sortable: false,
         },
-        {
-          label: this.$t("action"),
-          field: "action",
-          tdClass: "bodyWidth",
-          sortable: false,
-        },
+        // {
+        //   label: this.$t("action"),
+        //   field: "action",
+        //   tdClass: "bodyWidth",
+        //   sortable: false,
+        // },
       ];
     },
   },

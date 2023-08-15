@@ -816,3 +816,14 @@ export function controlDAPrice(postData) {
 
 	return Promise.resolve(data);
 }
+
+export function depositManage(postData) {
+	const data = request({
+		url: current + 'admin-api/wallet/depositManageControl',
+		method: 'post',
+		data: postData,
+		headers: retHeader()
+	});
+
+	return Promise.resolve(data);
+}
